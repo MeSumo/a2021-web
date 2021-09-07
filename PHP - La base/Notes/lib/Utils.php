@@ -4,4 +4,5 @@
 		return $nombre1 + $nombre2;
 	}
 
-	// fichier non fermé (pas de balise de fermeture php)
+	// fichier non fermï¿½ (pas de balise de fermeture php)
+	// si fichier se termine par php, ne ferme pas la balise
