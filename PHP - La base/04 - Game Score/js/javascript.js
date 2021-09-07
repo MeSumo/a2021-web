@@ -70,18 +70,20 @@ const activateMole = () => {
         setTimeout(() => {
             spriteList[Math.floor(spriteList.length * Math.random())].active = true;
 
-            timeoutId = setTimeout(activateMole, 1000);    
+            timeoutId = setTimeout(activateMole, 1000);
         }, 500);
-    }    
+    }
     else if (totalTime == null) {
         totalTime = new Date() - startTime;
+        document.getElementById("btn").style.display = "block";
+        document.querySelector("#pointage").value = totalTime/1000;
         spriteList.push(new Tractor(totalTime));
     }
 }
 
 const tick = () => {
     ctx.clearRect(0, 0, 960, 576);
-    
+
     if (backgroundImage.complete) {
         ctx.drawImage(backgroundImage, 0, 0);
     }
@@ -89,7 +91,7 @@ const tick = () => {
     for (let i = 0; i < spriteList.length; i++) {
         const element = spriteList[i];
         element.tick();
-    }    
+    }
 
     window.requestAnimationFrame(tick);
 }
