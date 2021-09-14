@@ -13,15 +13,21 @@
 	<script src="https://notes-de-cours.com/dev/toggle-lab-info.js"></script>
 </head>
 <body>
-
+	<script>
+		function randomv(){
+			let randv = document.getE
+			Math.floor(Math.random() * 500);
+			return randv;
+		}
+	</script>
 	<div>
 		<form action="" method="POST">
 			<div>New memo : </div>
 			<div><input name="memo" /></div>
 			<div>X : </div>
-			<div><input name="champx" /></div>
+			<div><input name="champx" value=500 /></div>
 			<div>Y : </div>
-			<div><input name="champy" /></div>
+			<div><input name="champy" value=500 /></div>
 			<div><button>ADD</button></div>
 			<a href="notes.php">List memos</a>
 			<a href="delete.php">Delete</a>
