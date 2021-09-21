@@ -1,6 +1,10 @@
 <?php
 	require_once("action/imagesAction.php");
 
+	$action = new ImagesAction();
+	$data = $action->execute();
+	$data["pageName"] = "Galerie photos";
+
 	require_once("partial/header.php");
 ?>
 	<div id="page-images">

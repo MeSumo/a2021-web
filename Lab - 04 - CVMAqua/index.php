@@ -1,6 +1,10 @@
 <?php
 	require_once("action/indexAction.php");
 
+	$action = new IndexAction();
+	$data = $action->execute();
+	$data["pageName"] = "Accueil";
+
 	require_once("partial/header.php");
 ?>
 	<div id="page-index">

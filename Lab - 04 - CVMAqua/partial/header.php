@@ -14,7 +14,7 @@
 		    	<div class="site-header">
 		    		<div class="page-title-section">
 			    		<h1>CVMAQUA - Groupe de protection de l'eau</h1>
-			    		<h2>Accueil</h2>
+			    		<h2><?= $data["pageName"] ?></h2>
 		    		</div>
 		    		<div class="menu-section">
 		    			<ul>

@@ -1,6 +1,10 @@
 <?php
 	require_once("action/contactAction.php");
 
+	$action = new ContactAction();
+	$data = $action->execute();
+	$data["pageName"] = "Contactez-nous";
+
 	require_once("partial/header.php");
 ?>
 	<div id="page-contact">
