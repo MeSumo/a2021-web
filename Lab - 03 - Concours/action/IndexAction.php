@@ -11,10 +11,10 @@
         protected function executeAction() {
             $hasConnectionError = false;
 
-            /*if(!empty($_SESSION["inscrit"])){
+            if(!empty($_SESSION["inscrit"])){
                 $hasConnectionError = true;
-            }*/
-            if(isset($_POST["name"]) && isset($_POST["type"])){
+            }
+            else if(isset($_POST["name"]) && isset($_POST["type"])){
                 $result = StatsDAO::save($_POST["name"], $_POST["type"]);
 
                 if(!empty($result)){

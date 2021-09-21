@@ -1,5 +1,5 @@
 <?php
-	// require_once("action/indexAction.php");
+	require_once("action/contactAction.php");
 
 	require_once("partial/header.php");
 ?>
