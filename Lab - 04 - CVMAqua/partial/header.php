@@ -19,8 +19,18 @@
 		    		<div class="menu-section">
 		    			<ul>
 		    				<li><a href="index.php">Accueil</a></li>
-		    				<li><a href="images.php">Galerie photos</a></li>
+							<li><a href="images.php">Galerie photos</a></li>
 		    				<li><a href="contact.php">Contactez-nous</a></li>
+							<li><a href="login.php">Log in</a></li>
+							<?php
+								if($action->isLoggedIn()){
+									?>
+										<li><a href="admin-index.php">Accueil-Admin</a></li>
+										<li><a href="logout.php">Déconnexion</a></li>
+									<?php
+								}
+							?>
+
 		    			</ul>
 		    		</div>
 		    		<div class="clear"></div>

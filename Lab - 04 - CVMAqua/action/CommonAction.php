@@ -36,5 +36,9 @@
             return $data;
         }
 
+        public function isLoggedIn() {
+            return $_SESSION["visibility"] > CommonAction::$VISIBILITY_PUBLIC;
+        }
+
         protected abstract function executeAction();
     }
