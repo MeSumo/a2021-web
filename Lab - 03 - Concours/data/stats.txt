@@ -1,0 +1,11 @@
+
+bob;Simple
+second bob;Double
+new bob;Suite
+bob forever;Double
+bob again;Simple
+why bob;Double
+bob never stops;Suite
+bob is on vacation;Simple
+bob is done;Simple
+bye bob;Double
