@@ -26,7 +26,7 @@
 								if($action->isLoggedIn()){
 									?>
 										<li><a href="admin-index.php">Accueil-Admin</a></li>
-										<li><a href="logout.php">Déconnexion</a></li>
+										<li><a href="?logout=true">Déconnexion</a></li>
 									<?php
 								}
 							?>
