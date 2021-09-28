@@ -1,7 +1,7 @@
 <?php
 
 	require_once("action/IndexAction.php");
-	
+
 	$action = new IndexAction();
 	$data = $action->execute();
 
@@ -11,11 +11,11 @@
 		<form action="index.php" method="post">
 			<div>
 				<div class="authSection">
-				
+
 					<h1>Authentification</h1>
-					
+
 					<div class="authFormFields">
-					
+
 						<?php
 							if (!empty($data["errorMessage"])) {
 								?>
@@ -25,7 +25,7 @@
 								<?php
 							}
 						?>
-					
+
 						<div class="formLabel">
 							<label for="username">Nom usager :</label>
 						</div>
@@ -33,7 +33,7 @@
 							<input type="text" name="username" id="password" />
 						</div>
 						<div class="formSpacer"></div>
-						
+
 						<div class="formLabel">
 							<label for="password">Mot de passe :</label>
 						</div>
@@ -41,7 +41,7 @@
 							<input type="password" name="password" id="password" />
 						</div>
 						<div class="formSpacer"></div>
-						
+
 						<div class="formLabel">
 							<input type="submit" value="Authentifier" />
 						</div>
@@ -52,5 +52,3 @@
 	</div>
 <?php
 	require_once("partial/footer.php");
-	
-	

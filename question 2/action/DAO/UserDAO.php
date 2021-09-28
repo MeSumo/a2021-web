@@ -8,10 +8,10 @@ class UserDAO {
 	 */
 	public static function authenticate($username, $password) {
 		$success = false;
-	
+
 		$adminUsers = file_get_contents("db/user.txt");
 		$adminUsers = explode("\n", $adminUsers);
-		
+
 		foreach ($adminUsers as $user) {
 			$data = explode(":", $user);
 
@@ -19,7 +19,26 @@ class UserDAO {
 				$success = true;
 			}
 		}
-		
+
 		return $success;
+	}
+
+	public static function failedattemps($username){
+		$tooMany = false;
+		$nb = 0;
+		$data = file_get_contents("db/failed.txt");
+		$lines = explode("\n", $data);
+
+		foreach($lines as $attemps){
+			if($attemps == $username){
+				$nb++;
+			}
+		}
+
+		if($nb >= 5){
+			$tooMany = true;
+		}
+
+		return $tooMany;
 	}
 }
