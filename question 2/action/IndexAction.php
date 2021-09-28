@@ -14,7 +14,8 @@
 			if (!empty($_POST["username"]) && !empty($_POST["password"])) {
 				$success = UserDAO::authenticate($_POST["username"], $_POST["password"]);
 
-				if(!empty($_SESSION["verrouille"])){
+				$attemps = UserDAO::failedattemps($_POST["username"]);
+				if ($attemps === true){
 					$errorMessage = "Désolé, le compte est verrouillé";
 				}
 				else if ($success === true) {
@@ -29,7 +30,6 @@
 					$attemps = UserDAO::failedattemps($_POST["username"]);
 					if ($attemps === true){
 						$errorMessage = "Authentification erronée:le compte est verrouillé";
-						$_SESSION["verrouille"] = 1;
 					}
 					else{
 						$errorMessage = "Authentification erronée";
