@@ -46,9 +46,9 @@
                     <h3>Smart Home</h3>
                     <div>
                         <div>
-                            <form action="" method="post">
+                            <a href="">
                                 <img src="img/btn-refresh.png" alt="refresh" class="btn-refresh">
-                            </form>
+                            </a>
                         </div>
                         <div class="steps-section">
                             <p>
