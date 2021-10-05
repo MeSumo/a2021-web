@@ -17,6 +17,7 @@
             }
 
             return $result;
+            # return $statement->fetchAll();
         }
 
     }

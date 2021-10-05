@@ -19,12 +19,12 @@
         <div>
             <main>
                 <div id="house">
-                    <img src="img/light-off.png" alt="light1" id="light1">
+                    <!-- <img src="img/light-off.png" alt="light1" id="light1">
                     <img src="img/light-off.png" alt="light2" id="light2">
                     <img src="img/light-off.png" alt="light3" id="light3">
                     <img src="img/light-off.png" alt="light4" id="light4">
                     <img src="img/light-off.png" alt="light5" id="light5">
-                    <img src="img/light-off.png" alt="light6" id="light6">
+                    <img src="img/light-off.png" alt="light6" id="light6">-->
                     <?php
                         foreach($data["result"] as $lights){
                             if($lights[1] === 1){
@@ -46,7 +46,7 @@
                     <h3>Smart Home</h3>
                     <div>
                         <div>
-                            <form action="">
+                            <form action="" method="post">
                                 <img src="img/btn-refresh.png" alt="refresh" class="btn-refresh">
                             </form>
                         </div>
