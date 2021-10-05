@@ -1,3 +1,10 @@
+<?php
+	require_once("action/indexAction.php");
+
+	$action = new IndexAction();
+	$data = $action->execute();
+?>
+
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -36,37 +43,35 @@ function test(e) {
 					<div class="left">
 						<h2>Réponses</h2>
 
-						<div class="answer">
-							<div class="text">
-								JavaScript est de la bouette, passe donc à C#. Il a été prouvé que l'utilisation de JavaScript augmente la dépendance à la programmation Web!
-							</div>
-							<div class="author">
-								Par : John W
-							</div>
-						</div>
+						<?php
+							foreach($data["answers"] as $reponse){
+								?>
+									<div class="answer">
+										<div class="text">
+											<?= $reponse["answer"] ?>
+										</div>
+										<div class="author">
+											Par : <?= $reponse["author"] ?>
+										</div>
+									</div>
+								<?php
+							}
+						?>
 
-						<div class="answer">
-							<div class="text">
-								Est-ce que JavaScript est installé sur ton ordinateur? Moi, j'ai la JVM 1.8.
+						<form action="" method="post">
+							<div class="answer">
+								<strong>Vous avez la réponse? Aidez-le !</strong>
+								<div class="text">
+									<textarea name="reponse" required placeholder="Votre réponse"></textarea>
+								</div>
+								<div class="author">
+									<input type="text" name="author" required placeholder="Votre nom">
+								</div>
+								<div class="send-btn">
+									<button>Envoyer</button>
+								</div>
 							</div>
-							<div class="author">
-								Par : Mario B.
-							</div>
-						</div>
-
-						<div class="answer">
-							<strong>Vous avez la réponse? Aidez-le !</strong>
-							<div class="text">
-								<textarea required placeholder="Votre réponse"></textarea>
-							</div>
-							<div class="author">
-								<input type="text" required placeholder="Votre nom">
-							</div>
-							<div class="send-btn">
-								<button>Envoyer</button>
-							</div>
-						</div>
-
+						</form>
 					</div>
 					<div class="right">
 						<div class="pub"></div>
@@ -105,7 +110,7 @@ function test(e) {
 						Ajouter le framework de classes PHP (IndexAction, CommonAction, etc.)
 					</li>
 					<li>
-						Sur votre base de données (PostgreSQL, MySQL ou Oracle), créer une table « stack_answers », permettant de conserver les réponses des utilisateurs (voir le fichier table.sql pour la version pgsql). 
+						Sur votre base de données (PostgreSQL, MySQL ou Oracle), créer une table « stack_answers », permettant de conserver les réponses des utilisateurs (voir le fichier table.sql pour la version pgsql).
 					</li>
 					<li>
 						Dans un DAO (AnswerDAO), ajouter les méthodes : <code>getAnswers()</code> et <code>addAnswer(author, answer)</code>.
