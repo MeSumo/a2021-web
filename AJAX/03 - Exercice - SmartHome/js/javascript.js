@@ -16,5 +16,6 @@ function updateLights() {
 }
 
 window.addEventListener("load", () => {
+    updateLights();
     setInterval(updateLights, 5000);
 })
