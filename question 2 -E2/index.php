@@ -40,7 +40,7 @@
 						<div>
 							<select name="choice">
 								<?php
-								$tab = ["--", "Nombre de tables", "Date", "Sauvegarder"];
+									$tab = ["--", "Nombre de tables", "Date", "Sauvegarder"];
 									for($i = 0; $i < 4; $i++){
 										if($i == $data["choice"]){
 											?>
