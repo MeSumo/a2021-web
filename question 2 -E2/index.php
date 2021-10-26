@@ -39,10 +39,6 @@
 						<div>Choix : </div>
 						<div>
 							<select name="choice">
-								<!-- <option value="0">--</option>
-								<option value="1">Nombre de tables</option>
-								<option value="2">Date</option>
-								<option value="3">Sauvegarder</option>-->
 								<?php
 								$tab = ["--", "Nombre de tables", "Date", "Sauvegarder"];
 									for($i = 0; $i < 4; $i++){
