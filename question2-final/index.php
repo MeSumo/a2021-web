@@ -8,20 +8,16 @@
 	require_once("partial/header.php");
 ?>
 	<div class="container">
-		<table>
+		<table id="table">
 			<tr>
 				<th>Date</th>
 				<th>Gagnant</th>
 				<th>Perdant</th>
 			</tr>
-			<tr>
-				<td>Exemple 1</td>
-				<td>Exemple 2</td>
-				<td>Exemple 3</td>
-			</tr>
+
 		</table>
 		<div class="btn-container">
-			<button>
+			<button id="suivant" onclick="changePage()">
 				Suivant &gt;&gt;
 			</button>
 		</div>
