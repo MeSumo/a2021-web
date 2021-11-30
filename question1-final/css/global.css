@@ -1,0 +1,78 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+
+.container {
+	width:672px;
+	margin:10px auto;
+}
+
+h1 {
+	color:slategrey;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid slategrey;
+	margin-bottom: 50px;
+}
+
+.map {
+	width: 672px;
+	height: 842px;
+	background-image: url('../images/map.png');
+	position: relative;
+}
+
+.city {
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	margin-left: -50px;
+	line-height: 30px;
+	font-size: 20px;
+	margin-top:-15px;
+	color: green;
+	font-weight: 800;
+	text-shadow: 0px 0 2px white;
+	cursor: pointer;
+}
+
+#no-1 {
+	left: 180px;
+	top:780px;
+}
+
+#no-2 {
+	left:265px;
+	top:720px;
+}
+
+#no-3 {
+	left:335px;
+	top:220px;
+}
+
+#no-4 {
+	left:360px;
+	top:645px;
+}
+
+#no-5 {
+	left:110px;
+	top:765px;
+}
+
+#no-6 {
+	left:465px;
+	top:635px;
+}
+
+#no-7 {
+	left:250px;
+	top:670px;
+}
+
+#no-8 {
+	left:240px;
+	top:800px;
+}

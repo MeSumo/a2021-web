@@ -8,7 +8,7 @@
 	<body>
 		<div>
 			<div id="analyze-icon">
-				
+
 			</div>
 			<div id="analyze-result">
 				<?php
@@ -23,7 +23,7 @@
 				?>
 			</div>
 			<div id="search-line">
-				<form action="" method="get"> 
+				<form action="" method="get">
 						<div>
 							<input type="text" name="searchBox" placeholder="Texte à analyser" />
 						</div>
